@@ -30,5 +30,10 @@ SocialHistory socialHistory = carePlan.getSocialHistory();
 // and all the above mentioned details
 
 ```
+Parser can accept 
+ 1. The CCD document file path
+ 2. String containing CCD document, optionally can provide the encoding
+ 3. InputStream
+
 
 ## Feel free to create a PR or issues for the improvements
