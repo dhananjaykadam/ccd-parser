@@ -1,4 +1,4 @@
-# CCDA Parser #
+# CCD CCDA Parser #
 
 * Created this library specifially to parse the ccd/ccda documents most commom patient details  like demographics, medication, allergies, vitals, goals etc.
 
