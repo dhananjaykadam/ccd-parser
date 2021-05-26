@@ -1,28 +1,34 @@
-# README #
+# CCDA Parser #
 
-This README would normally document whatever steps are necessary to get your application up and running.
+* Created this library specifially to parse the ccd/ccda documents most commom patient details  like demographics, medication, allergies, vitals, goals etc.
 
-### What is this repository for? ###
+## Following details will be extracted from the CCDA document ##
+* Patient
+* Provider
+* Practice
+* PatientProblemDiagnosis
+* Goals
+* PatientMedications
+* PatientAllergies
+* InterdisclinaryTeams
+* Educations
+* ActionItems
+* Results
+* VitalSigns
+* SocialHistory
+* PlanOfCare
 
-* Quick summary
-* Version
+`CarePlan`  is the object that has every details, and careplan is returned by the parser, though, you can use specific service to get specific details as needed.
 
-### How do I get set up? ###
+## Usage ##
+```
+CCDParser parser = new CCDParser();
+CarePlan carePlan = parser.parse("path")
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+PatientAllergies[] allergies = carePlan.getAllergies();
+SocialHistory socialHistory = carePlan.getSocialHistory();
+// and all the above mentioned details
 
-### Contribution guidelines ###
+```
 
-* Writing tests
-* Code review
-* Other guidelines
-
-### Who do I talk to? ###
-
-* Repo owner or admin
-* Other community or team contact
+## Feel free to create a PR or issues for the improvements
